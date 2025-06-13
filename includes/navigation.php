@@ -8,10 +8,10 @@
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
 $nav_items = [
     'home' => ['url' => '/', 'label' => 'Home'],
-    'hosting' => ['url' => '/hosting', 'label' => 'Hosting'],
-    'vps' => ['url' => '/vps', 'label' => 'VPS'],
-    'domains' => ['url' => '/domains', 'label' => 'Domains'],
-    'support' => ['url' => '/support', 'label' => 'Support']
+    'hosting' => ['url' => '/hosting.php', 'label' => 'Hosting'],
+    'vps' => ['url' => '/vps.php', 'label' => 'VPS'],
+    'domains' => ['url' => '/domains.php', 'label' => 'Domains'],
+    'support' => ['url' => '/support.php', 'label' => 'Support']
 ];
 ?>
 
