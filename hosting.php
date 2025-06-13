@@ -142,6 +142,27 @@ $included_features = [
     'Staging Environment' => 'Test changes before going live'
 ];
 
+$testimonials = [
+    [
+        'text' => 'After years of dealing with oversold hosting providers, Bastion is a breath of fresh air. My site loads in under 2 seconds now, and their support actually knows what they\'re talking about.',
+        'author' => 'Sarah Chen',
+        'company' => 'TechStartup.io',
+        'rating' => 5
+    ],
+    [
+        'text' => 'The migration was seamless, and the performance improvement was immediate. No more random slowdowns or mysterious downtime. Worth every penny.',
+        'author' => 'Mike Rodriguez',
+        'company' => 'Rodriguez Law Firm',
+        'rating' => 5
+    ],
+    [
+        'text' => 'Finally, a hosting company that doesn\'t treat me like a number. When I call support, I get an expert who solves my problem on the first try.',
+        'author' => 'Emily Watson',
+        'company' => 'Creative Agency Plus',
+        'rating' => 5
+    ]
+];
+
 $comparison_features = [
     'Websites' => ['1', '5', 'Unlimited'],
     'Storage' => ['10GB NVMe', '25GB NVMe', '100GB NVMe'],
@@ -434,6 +455,177 @@ $comparison_features = [
         </div>
     </section>
 
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it. Here's what real customers think about our hosting.</p>
+            </div>
+            
+            <div style="
+                display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+                gap: var(--space-xl); 
+                margin-top: var(--space-2xl);
+            ">
+                <?php foreach ($testimonials as $testimonial): ?>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <?= htmlspecialchars($testimonial['text']) ?>
+                        </div>
+                        <div class="testimonial-rating" style="margin-bottom: var(--space-md);">
+                            <?php for ($i = 0; $i < $testimonial['rating']; $i++): ?>
+                                <span style="color: #ffd700; font-size: var(--font-size-lg);">★</span>
+                            <?php endfor; ?>
+                        </div>
+                        <div class="testimonial-author">
+                            <?= htmlspecialchars($testimonial['author']) ?>
+                        </div>
+                        <div class="testimonial-company">
+                            <?= htmlspecialchars($testimonial['company']) ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Specifications</h2>
+                <p>Built on enterprise-grade infrastructure for maximum performance and reliability.</p>
+            </div>
+            
+            <div style="
+                display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+                gap: var(--space-lg); 
+                margin-top: var(--space-2xl);
+            ">
+                <div class="tech-spec-card" style="
+                    background: var(--bg-secondary);
+                    border: 1px solid var(--border);
+                    border-radius: var(--radius-lg);
+                    padding: var(--space-xl);
+                    text-align: center;
+                ">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background: var(--gradient-primary);
+                        border-radius: var(--radius-full);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto var(--space-lg);
+                    ">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-sm);">
+                        NVMe SSD Storage
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        Enterprise-grade NVMe drives deliver up to 10x faster performance than traditional SATA SSDs
+                    </p>
+                </div>
+                
+                <div class="tech-spec-card" style="
+                    background: var(--bg-secondary);
+                    border: 1px solid var(--border);
+                    border-radius: var(--radius-lg);
+                    padding: var(--space-xl);
+                    text-align: center;
+                ">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background: var(--gradient-primary);
+                        border-radius: var(--radius-full);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto var(--space-lg);
+                    ">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                            <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-sm);">
+                        Intel Xeon Processors
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        Enterprise-grade Intel Xeon processors with dedicated CPU cores for consistent performance
+                    </p>
+                </div>
+                
+                <div class="tech-spec-card" style="
+                    background: var(--bg-secondary);
+                    border: 1px solid var(--border);
+                    border-radius: var(--radius-lg);
+                    padding: var(--space-xl);
+                    text-align: center;
+                ">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background: var(--gradient-primary);
+                        border-radius: var(--radius-full);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto var(--space-lg);
+                    ">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-sm);">
+                        CloudFlare CDN
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        Global content delivery network with 200+ locations for lightning-fast page loads worldwide
+                    </p>
+                </div>
+                
+                <div class="tech-spec-card" style="
+                    background: var(--bg-secondary);
+                    border: 1px solid var(--border);
+                    border-radius: var(--radius-lg);
+                    padding: var(--space-xl);
+                    text-align: center;
+                ">
+                    <div style="
+                        width: 60px;
+                        height: 60px;
+                        background: var(--gradient-primary);
+                        border-radius: var(--radius-full);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto var(--space-lg);
+                    ">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: var(--text-primary); margin-bottom: var(--space-sm);">
+                        99.9% Uptime SLA
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                        Redundant infrastructure with automatic failover and 24/7 monitoring for maximum availability
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="section" style="background: var(--bg-secondary);">
         <div class="container">
@@ -515,6 +707,81 @@ $comparison_features = [
         border-right: none;
     }
     
+    .plan-card-enhanced {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .plan-card-enhanced::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+        transition: left 0.6s;
+    }
+    
+    .plan-card-enhanced:hover::before {
+        left: 100%;
+    }
+    
+    .savings-badge {
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        background: linear-gradient(135deg, #00aa44, #00cc52);
+        color: white;
+        padding: var(--space-xs) var(--space-sm);
+        border-radius: var(--radius-full);
+        font-size: var(--font-size-xs);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 10px rgba(0, 170, 68, 0.3);
+    }
+    
+    .plan-tooltip {
+        position: relative;
+        cursor: help;
+    }
+    
+    .plan-tooltip:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        padding: var(--space-sm);
+        border-radius: var(--radius-md);
+        font-size: var(--font-size-xs);
+        white-space: nowrap;
+        z-index: 100;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .performance-indicator {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        background: rgba(0, 170, 68, 0.1);
+        color: #00aa44;
+        padding: var(--space-xs) var(--space-sm);
+        border-radius: var(--radius-sm);
+        font-size: var(--font-size-xs);
+        font-weight: 600;
+        margin-left: var(--space-sm);
+    }
+    
+    .performance-indicator::before {
+        content: '⚡';
+        font-size: var(--font-size-sm);
+    }
+    
     @media (max-width: 768px) {
         .pricing-grid {
             grid-template-columns: 1fr;
@@ -527,7 +794,193 @@ $comparison_features = [
         table th, table td {
             padding: var(--space-sm);
         }
+        
+        .savings-badge {
+            position: static;
+            display: inline-block;
+            margin-bottom: var(--space-md);
+        }
+    }
+    
+    /* Loading states for dynamic content */
+    .plan-loading {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+    
+    .plan-loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0 -10px;
+        border: 2px solid var(--primary);
+        border-top: 2px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    /* Testimonial cards styling */
+    .testimonial-card {
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: var(--space-xl);
+        text-align: center;
+        transition: all var(--transition-base);
+        position: relative;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary);
+    }
+    
+    .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-size: 4rem;
+        color: var(--primary);
+        opacity: 0.3;
+        font-family: serif;
+    }
+    
+    .testimonial-text {
+        font-style: italic;
+        margin-bottom: var(--space-md);
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+    
+    .testimonial-author {
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-xs);
+    }
+    
+    .testimonial-company {
+        font-size: var(--font-size-sm);
+        color: var(--primary);
     }
     </style>
+
+    <!-- Enhanced JavaScript for hosting page -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add enhanced interactions for hosting plans
+        const planCards = document.querySelectorAll('.pricing-card');
+        
+        planCards.forEach(card => {
+            // Add shimmer effect class
+            card.classList.add('plan-card-enhanced');
+            
+            // Track plan interactions
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'A') {
+                    const ctaButton = card.querySelector('.cta-button');
+                    if (ctaButton) {
+                        ctaButton.click();
+                    }
+                }
+            });
+            
+            // Add loading state on CTA click
+            const ctaButton = card.querySelector('.cta-button');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', function() {
+                    card.classList.add('plan-loading');
+                    this.textContent = 'Loading...';
+                });
+            }
+        });
+        
+        // Smooth scroll to plans when clicking hero CTA
+        const heroCtaButton = document.querySelector('.hero .cta-button');
+        if (heroCtaButton) {
+            heroCtaButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('hosting-plans').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        }
+        
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('h3');
+            const answer = item.querySelector('p');
+            
+            question.style.cursor = 'pointer';
+            question.addEventListener('click', function() {
+                const isExpanded = answer.style.display === 'block';
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    const otherAnswer = otherItem.querySelector('p');
+                    otherAnswer.style.display = 'none';
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isExpanded) {
+                    answer.style.display = 'block';
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Add plan comparison highlights
+        const comparisonTable = document.querySelector('table');
+        if (comparisonTable) {
+            const headerCells = comparisonTable.querySelectorAll('thead th');
+            const bodyCells = comparisonTable.querySelectorAll('tbody td');
+            
+            headerCells.forEach((header, index) => {
+                if (index === 0) return; // Skip feature column
+                
+                header.addEventListener('mouseenter', function() {
+                    // Highlight column
+                    bodyCells.forEach((cell, cellIndex) => {
+                        if ((cellIndex - 1) % (headerCells.length - 1) === (index - 1)) {
+                            cell.style.background = 'rgba(0, 102, 255, 0.1)';
+                        }
+                    });
+                });
+                
+                header.addEventListener('mouseleave', function() {
+                    // Remove highlight
+                    bodyCells.forEach(cell => {
+                        cell.style.background = '';
+                    });
+                });
+            });
+        }
+        
+        // Performance indicators
+        const storageSpecs = document.querySelectorAll('.plan-specs');
+        storageSpecs.forEach(spec => {
+            const storageRow = Array.from(spec.children).find(row => 
+                row.textContent.toLowerCase().includes('storage')
+            );
+            if (storageRow && storageRow.textContent.includes('NVMe')) {
+                const indicator = document.createElement('span');
+                indicator.className = 'performance-indicator';
+                indicator.textContent = '10x Faster';
+                storageRow.appendChild(indicator);
+            }
+        });
+    });
+    </script>
 </body>
 </html>
