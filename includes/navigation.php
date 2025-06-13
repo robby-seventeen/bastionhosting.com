@@ -11,7 +11,7 @@ $nav_items = [
     'hosting' => ['url' => '/hosting.php', 'label' => 'Hosting'],
     'vps' => ['url' => '/vps.php', 'label' => 'VPS'],
     'domains' => ['url' => '/domains.php', 'label' => 'Domains'],
-    'support' => ['url' => '/support.php', 'label' => 'Support']
+    'support' => ['url' => '/contact.php', 'label' => 'Support']
 ];
 ?>
 
