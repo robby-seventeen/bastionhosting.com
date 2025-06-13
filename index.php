@@ -107,13 +107,7 @@ header("Referrer-Policy: strict-origin-when-cross-origin");
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/components.js"></script>
     
-    <!-- Performance monitoring (privacy-friendly) -->
-    <script>
-        // Basic performance monitoring without tracking
-        window.addEventListener('load', function() {
-            const loadTime = performance.now().toFixed(0);
-            console.log(`Page loaded in ${loadTime}ms`);
-        });
-    </script>
+    <!-- Analytics -->
+    <script defer src="https://analytics.17-solutions.net/script.js" data-website-id="03ec9ac3-8fb0-4cc8-ba54-92260d2dbd8e"></script>
 </body>
 </html>
