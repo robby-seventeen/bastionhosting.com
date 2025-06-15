@@ -26,7 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon - Bastion Hosting | Premium Web Hosting</title>
-    <meta name="description" content="Bastion Hosting is coming soon. Premium web hosting without the corporate nonsense. Get notified when we launch.">
+    <meta name="description" content="Premium web hosting without the corporate nonsense. Bastion Hosting delivers enterprise-grade infrastructure with personal service.">
+    <meta name="keywords" content="web hosting, VPS hosting, managed hosting, premium hosting, dedicated servers">    
     <meta name="robots" content="index, follow">
     
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
